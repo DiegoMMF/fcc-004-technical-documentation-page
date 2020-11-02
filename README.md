@@ -1,12 +1,12 @@
 # freeCode Camp curriculum
 ## Responsive Web Design Certification
-### Project 3/5: fcc-003-product-landing-page
-Web hosted in: https://fcc-003-product-landing-page.vercel.app/
+### Project 3/5: Technical Documentagion Page
+Web hosted in: https://fcc-004-technical-documentation-page-git-master.diegommf.vercel.app/
 
 #### Author DiegoMMF
 
 ## Assigment:
-https://fcc-004-technical-documentation-page-git-master.diegommf.vercel.app/
+https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page
 
 ### Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/NdrKKL.
 
