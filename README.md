@@ -1,6 +1,6 @@
 # freeCode Camp curriculum
 ## Responsive Web Design Certification
-### Project 3/5: Technical Documentagion Page
+### Project 4/5: Technical Documentagion Page
 Web hosted in: https://fcc-004-technical-documentation-page-git-master.diegommf.vercel.app/
 
 #### Author DiegoMMF
