@@ -10,120 +10,137 @@
 </head>
 
 <body>
-  <!-- User Story #8: I can see a nav element with a corresponding id="navbar". -->
+  <!-- User Story #8 -->
   <nav id="navbar">
-    
-    <!-- User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation.
-    
-    User Story #11: The header element in the navbar must come before any link (a) elements in the navbar.-->    
-     <header>
-
-     </header>
-
-     <!-- User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section.
-
-    User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world").
-
-    User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header. -->
-
-      <a href="#A" class="nav-link">A</a>
-      <a href="#B" class="nav-link">B</a>
-      <a href="#C" class="nav-link">C</a>
-      <a href="#D" class="nav-link">D</a>
-      <a href="#E" class="nav-link">E</a>
-
+    <header>
+      These are notes taken from React.js official webpage. Only for test.
+    </header>
+    <!-- User Story #9 & #11 -->
+    <a href="#useState" class="nav-link">useState</a><!-- User Story #10, #12 & #13 -->
+    <a href="#useEffect" class="nav-link">useEffect</a>
+    <a href="#useContext" class="nav-link">useContext</a>
+    <a href="#useReducer" class="nav-link">useReducer</a>
+    <a href="#useCallback" class="nav-link">useCallback</a>
   </nav>
-  
+
   <main id="main-doc">
-    <!-- User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation). -->
-
-
-    <!-- User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5. -->
-    <section class="main-section" id="A">
-      <!-- User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section.
-
-      User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java"). -->
-
+    <!-- User Story #1 & #2 -->
+    <section class="main-section" id="useState">
+      <!-- User Story #3 & #4 -->
       <header>
-        A
-      </header>
-      <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat esse at optio, excepturi laboriosam sint accusantium. Harum explicabo ipsum soluta fugit enim, asperiores ratione voluptatibus dolor aliquam recusandae error, amet laboriosam assumenda nesciunt consequatur deserunt earum. Magni voluptatem assumenda magnam perspiciatis iste eum fuga consectetur a harum, asperiores explicabo facere.
-        <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
-        <code>Lorem.</code>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores enim perferendis neque sint et unde hic veritatis error esse rerum sed eos dolorum iure quae nemo nulla tempora nesciunt dolorem consequatur, deleniti possimus quasi eaque! Eos nemo facilis odio? Dolorem?
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, cumque ducimus sint commodi placeat ab in laboriosam, non accusamus, incidunt nisi a vitae quam! Ullam eligendi laborum quos mollitia officia error eaque pariatur dolore, asperiores sint temporibus quas fuga illo consequatur maiores veniam dicta odit deleniti amet hic. Atque, cupiditate? A, eius distinctio? Debitis blanditiis ratione dolorem perferendis dicta reiciendis sint tempore, modi numquam accusantium distinctio. Provident voluptate enim ducimus rerum libero aut qui, illum ipsa aperiam vero. Ea iure sunt harum vero sint quo, est, possimus veniam veritatis similique atque libero fugit? Porro laudantium reprehenderit ab reiciendis rerum necessitatibus.
-      </p>
+        useState
+      </header><!-- User Story #5 -->
+      <code>const [state, setState] = useState(initialState);</code><!-- User Story #6 -->
+      <p>Returns a stateful value, and a function to update it.</p>
+      <p>During the initial render, the returned state (state) is the same as the value passed as the first argument
+        (initialState).</p>
+      <p>The setState function is used to update the state. It accepts a new state value and enqueues a re-render of the
+        component.</p>
+      <code>setState(newState);</code>
+      <p>During subsequent re-renders, the first value returned by useState will always be the most recent state after
+        applying updates.</p>
+      <p>If the new state is computed using the previous state, you can pass a function to setState. The function will
+        receive the previous value, and return an updated value. Here’s an example of a counter component that uses both
+        forms of setState:</p>
+      <code>function Counter({initialCount}) {
+        const [count, setCount] = useState(initialCount);
+        return (
+          < >
+            Count: {count}
+            < button onClick={
+              () => setCount(initialCount)}>Reset< /button>
+            < button onClick={
+              () => setCount(prevCount => prevCount - 1)}>-< /button>
+            < button onClick={
+              () => setCount(prevCount => prevCount + 1)}>+< /button>
+          < />
+        );
+      }</code>
     </section>
-
-    <section class="main-section" id="B">
+    <hr>
+    <section class="main-section" id="useEffect">
       <header>
-        B
+        useEffect
       </header>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat esse at optio, excepturi laboriosam sint accusantium. Harum explicabo ipsum soluta fugit enim, asperiores ratione voluptatibus dolor aliquam recusandae error, amet laboriosam assumenda nesciunt consequatur deserunt earum. Magni voluptatem assumenda magnam perspiciatis iste eum fuga consectetur a harum, asperiores explicabo facere.
-        <code>Lorem.</code>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores enim perferendis neque sint et unde hic veritatis error esse rerum sed eos dolorum iure quae nemo nulla tempora nesciunt dolorem consequatur, deleniti possimus quasi eaque! Eos nemo facilis odio? Dolorem?
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, cumque ducimus sint commodi placeat ab in laboriosam, non accusamus, incidunt nisi a vitae quam! Ullam eligendi laborum quos mollitia officia error eaque pariatur dolore, asperiores sint temporibus quas fuga illo consequatur maiores veniam dicta odit deleniti amet hic. Atque, cupiditate? A, eius distinctio? Debitis blanditiis ratione dolorem perferendis dicta reiciendis sint tempore, modi numquam accusantium distinctio. Provident voluptate enim ducimus rerum libero aut qui, illum ipsa aperiam vero. Ea iure sunt harum vero sint quo, est, possimus veniam veritatis similique atque libero fugit? Porro laudantium reprehenderit ab reiciendis rerum necessitatibus.
-      </p>
+      <code>useEffect(didUpdate);</code>
+      <p>Accepts a function that contains imperative, possibly effectful code.</p>
+      <p>Mutations, subscriptions, timers, logging, and other side effects are not allowed inside the main body of a
+        function component (referred to as React’s render phase). Doing so will lead to confusing bugs and
+        inconsistencies in the UI.</p>
+      <p>Instead, use useEffect. The function passed to useEffect will run after the render is committed to the screen.
+        Think of effects as an escape hatch from React’s purely functional world into the imperative world.</p>
+      <p>By default, effects run after every completed render, but you can choose to fire them only when certain values
+        have changed.</p>
+      <p>Unlike componentDidMount and componentDidUpdate, the function passed to useEffect fires after layout and paint,
+        during a deferred event. This makes it suitable for the many common side effects, like setting up subscriptions
+        and event handlers, because most types of work shouldn’t block the browser from updating the screen.</p>
+      <p>However, not all effects can be deferred. For example, a DOM mutation that is visible to the user must fire
+        synchronously before the next paint so that the user does not perceive a visual inconsistency. (The distinction
+        is conceptually similar to passive versus active event listeners.) For these types of effects, React provides
+        one additional Hook called useLayoutEffect. It has the same signature as useEffect, and only differs in when it
+        is fired.</p>
+      <p>Although useEffect is deferred until after the browser has painted, it’s guaranteed to fire before any new
+        renders. React will always flush a previous render’s effects before starting a new update.</p>
     </section>
-
-    <section class="main-section" id="C">
+    <hr>
+    <section class="main-section" id="useContext">
       <header>
-        C
+        useContext
       </header>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat esse at optio, excepturi laboriosam sint accusantium. Harum explicabo ipsum soluta fugit enim, asperiores ratione voluptatibus dolor aliquam recusandae error, amet laboriosam assumenda nesciunt consequatur deserunt earum. Magni voluptatem assumenda magnam perspiciatis iste eum fuga consectetur a harum, asperiores explicabo facere.
-        <code>Lorem.</code>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores enim perferendis neque sint et unde hic veritatis error esse rerum sed eos dolorum iure quae nemo nulla tempora nesciunt dolorem consequatur, deleniti possimus quasi eaque! Eos nemo facilis odio? Dolorem?
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, cumque ducimus sint commodi placeat ab in laboriosam, non accusamus, incidunt nisi a vitae quam! Ullam eligendi laborum quos mollitia officia error eaque pariatur dolore, asperiores sint temporibus quas fuga illo consequatur maiores veniam dicta odit deleniti amet hic. Atque, cupiditate? A, eius distinctio? Debitis blanditiis ratione dolorem perferendis dicta reiciendis sint tempore, modi numquam accusantium distinctio. Provident voluptate enim ducimus rerum libero aut qui, illum ipsa aperiam vero. Ea iure sunt harum vero sint quo, est, possimus veniam veritatis similique atque libero fugit? Porro laudantium reprehenderit ab reiciendis rerum necessitatibus.
-      </p>
+      <code>const value = useContext(MyContext);</code>
+      <p>Accepts a context object (the value returned from React.createContext) and returns the current context value
+        for that context. The current context value is determined by the value prop of the nearest < MyContext.Provider>
+          above the calling component in the tree.</p>
+      <p>When the nearest < MyContext.Provider> above the component updates, this Hook will trigger a rerender with the
+          latest context value passed to that MyContext provider. Even if an ancestor uses React.memo or
+          shouldComponentUpdate, a rerender will still happen starting at the component itself using useContext.</p>
+      <p>A component calling useContext will always re-render when the context value changes. If re-rendering the
+        component is expensive, you can optimize it by using memoization.</p>
     </section>
-
-    <section class="main-section" id="D">
+    <hr>
+    <section class="main-section" id="useReducer">
       <header>
-        D
+        useReducer
       </header>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat esse at optio, excepturi laboriosam sint accusantium. Harum explicabo ipsum soluta fugit enim, asperiores ratione voluptatibus dolor aliquam recusandae error, amet laboriosam assumenda nesciunt consequatur deserunt earum. Magni voluptatem assumenda magnam perspiciatis iste eum fuga consectetur a harum, asperiores explicabo facere.
-        <code>Lorem.</code>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores enim perferendis neque sint et unde hic veritatis error esse rerum sed eos dolorum iure quae nemo nulla tempora nesciunt dolorem consequatur, deleniti possimus quasi eaque! Eos nemo facilis odio? Dolorem?
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, cumque ducimus sint commodi placeat ab in laboriosam, non accusamus, incidunt nisi a vitae quam! Ullam eligendi laborum quos mollitia officia error eaque pariatur dolore, asperiores sint temporibus quas fuga illo consequatur maiores veniam dicta odit deleniti amet hic. Atque, cupiditate? A, eius distinctio? Debitis blanditiis ratione dolorem perferendis dicta reiciendis sint tempore, modi numquam accusantium distinctio. Provident voluptate enim ducimus rerum libero aut qui, illum ipsa aperiam vero. Ea iure sunt harum vero sint quo, est, possimus veniam veritatis similique atque libero fugit? Porro laudantium reprehenderit ab reiciendis rerum necessitatibus.
-      </p>
+      <code>const [state, dispatch] = useReducer(reducer, initialArg, init);</code>
+      <p>An alternative to useState. Accepts a reducer of type (state, action) => newState, and returns the current
+        state paired with a dispatch method. (If you’re familiar with Redux, you already know how this works.)</p>
+      <p>useReducer is usually preferable to useState when you have complex state logic that involves multiple
+        sub-values or when the next state depends on the previous one. useReducer also lets you optimize performance for
+        components that trigger deep updates because you can pass dispatch down instead of callbacks.</p>
+      <p>There are two different ways to initialize useReducer state. You may choose either one depending on the use
+        case. The simplest way is to pass the initial state as a second argument:</p>
+      <p>You can also create the initial state lazily. To do this, you can pass an init function as the third argument.
+        The initial state will be set to init(initialArg).</p>
+      <p>It lets you extract the logic for calculating the initial state outside the reducer. This is also handy for
+        resetting the state later in response to an action:</p>
     </section>
-
-    <section class="main-section" id="E">
+    <hr>
+    <section class="main-section" id="useCallback">
       <header>
-        E
+        useCallback
       </header>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat esse at optio, excepturi laboriosam sint accusantium. Harum explicabo ipsum soluta fugit enim, asperiores ratione voluptatibus dolor aliquam recusandae error, amet laboriosam assumenda nesciunt consequatur deserunt earum. Magni voluptatem assumenda magnam perspiciatis iste eum fuga consectetur a harum, asperiores explicabo facere.
-        <code>Lorem.</code>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores enim perferendis neque sint et unde hic veritatis error esse rerum sed eos dolorum iure quae nemo nulla tempora nesciunt dolorem consequatur, deleniti possimus quasi eaque! Eos nemo facilis odio? Dolorem?
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, cumque ducimus sint commodi placeat ab in laboriosam, non accusamus, incidunt nisi a vitae quam! Ullam eligendi laborum quos mollitia officia error eaque pariatur dolore, asperiores sint temporibus quas fuga illo consequatur maiores veniam dicta odit deleniti amet hic. Atque, cupiditate? A, eius distinctio? Debitis blanditiis ratione dolorem perferendis dicta reiciendis sint tempore, modi numquam accusantium distinctio. Provident voluptate enim ducimus rerum libero aut qui, illum ipsa aperiam vero. Ea iure sunt harum vero sint quo, est, possimus veniam veritatis similique atque libero fugit? Porro laudantium reprehenderit ab reiciendis rerum necessitatibus.
-      </p>
-      <!-- User Story #7: The .main-section elements should contain at least 5 li items total (not each). -->
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-      </ul>
+      <code>const memoizedCallback = useCallback(
+        () => {
+          doSomething(a, b);
+        },
+        [a, b],
+      );</code>
+      <p>Returns a memoized callback.</p>
+      <p>Pass an inline callback and an array of dependencies. useCallback will return a memoized version of the
+        callback that only changes if one of the dependencies has changed. This is useful when passing callbacks to
+        optimized child components that rely on reference equality to prevent unnecessary renders (e.g.
+        shouldComponentUpdate).</p>
+        <hr>
+    <ul>
+      <h3>Other React Hooks (not mentioned)</h3><!-- User Story #7 -->
+      <li> useMemo</li>
+      <li> useRef</li>
+      <li> useImperativeHandle</li>
+      <li> useLayoutEffect</li>
+      <li> useDebugValue</li>
+    </ul>
     </section>
-
-
   </main>
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
