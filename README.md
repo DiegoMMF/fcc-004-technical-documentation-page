@@ -1,6 +1,3 @@
-# fcc-004-technical-documentation-page
-freeCode Camp curriculum: responsive web design projects, technical documentation page
-
 # freeCode Camp curriculum
 ## Responsive Web Design Certification
 ### Project 3/5: fcc-003-product-landing-page
